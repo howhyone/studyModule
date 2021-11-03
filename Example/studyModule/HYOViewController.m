@@ -18,7 +18,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSString *bundlePath = [NSBundle bundleForClass:[self class]].resourcePath;
+    NSString *imagePath = [[NSBundle bundleWithPath:bundlePath] pathForResource:@"" ofType:@"png"];
     self.view.backgroundColor = [UIColor redColor];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
